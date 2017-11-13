@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 
 description = 'Android BottomSheetBehavior with ViewPager support'
-group = 'biz.laenger.android'
+group = 'com.rohankandwal.android'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
