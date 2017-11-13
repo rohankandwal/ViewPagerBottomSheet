@@ -60,7 +60,7 @@ public class ViewPagerBottomSheetBehavior<V extends View> extends CoordinatorLay
     /**
      * Callback for monitoring events about bottom sheets.
      */
-    public abstract static class BottomSheetCallback {
+    public interface BottomSheetCallback {
 
         /**
          * Called when the bottom sheet changes its state.
@@ -70,7 +70,7 @@ public class ViewPagerBottomSheetBehavior<V extends View> extends CoordinatorLay
          *                    {@link #STATE_SETTLING}, {@link #STATE_EXPANDED},
          *                    {@link #STATE_COLLAPSED}, or {@link #STATE_HIDDEN}.
          */
-        public abstract void onStateChanged(@NonNull View bottomSheet, @State int newState);
+        public void onStateChanged(@NonNull View bottomSheet, @State int newState);
 
         /**
          * Called when the bottom sheet is being dragged.
@@ -81,7 +81,7 @@ public class ViewPagerBottomSheetBehavior<V extends View> extends CoordinatorLay
          *                    is between collapsed and expanded states and from -1 to 0 it is
          *                    between hidden and collapsed states.
          */
-        public abstract void onSlide(@NonNull View bottomSheet, float slideOffset);
+        public void onSlide(@NonNull View bottomSheet, float slideOffset);
     }
 
     /**
