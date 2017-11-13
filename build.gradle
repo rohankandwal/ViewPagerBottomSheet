@@ -9,11 +9,6 @@ buildscript {
 }
 
 ext {
-    runningOnJenkins = System.getenv('JENKINS_URL') != null
-    nexusReleasesRepository = getEnvOrProperty('NEXUS_RELEASES_REPOSITORY')
-    nexusSnapshotsRepository = getEnvOrProperty('NEXUS_SNAPSHOTS_REPOSITORY')
-    nexusUsername = getEnvOrProperty('NEXUS_USERNAME')
-    nexusPassword = getEnvOrProperty('NEXUS_PASSWORD')
 
     compileSdkVersion = 25
     buildToolsVersion = '25.0.0'
@@ -26,8 +21,8 @@ ext {
 allprojects {
     repositories {
         jcenter()
-        maven { url "https://raw.github.com/laenger/maven-releases/master/releases" }
-        maven { url "https://raw.github.com/laenger/maven-releases/master/snapshots" }
+        maven { url "https://raw.github.com/rohankandwal/maven-releases/master/releases" }
+        maven { url "https://raw.github.com/rohankandwal/maven-releases/master/snapshots" }
     }
 }
 
